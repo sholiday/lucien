@@ -58,8 +58,8 @@ public class ThriftApp {
 		}
 
 		@Override
-		public String run(String script, List arguments) throws TException {
-			return scriptRunner.runScript(script, (String[])arguments.toArray()).toJSONString();
+		public String run(String script, List<String> arguments) throws TException {
+			return scriptRunner.runScript(script, arguments.toArray(new String[0])).toJSONString();
 		}
 	}
 
